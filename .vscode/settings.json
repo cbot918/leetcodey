@@ -1,3 +1,14 @@
 {
-  "C_Cpp.errorSquiggles": "enabled"
+  "C_Cpp.errorSquiggles": "enabled",
+  "files.associations": {
+    "stdbool.h": "c",
+    "stdio.h": "c",
+    "string": "c",
+    "array": "c",
+    "string_view": "c"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none"
 }

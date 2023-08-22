@@ -46,6 +46,16 @@ void LevelOrder(Node* root){
   } 
 }
 void printNode(Node *current){
+  if(current->left == NULL){
+    current->left = (Node*)malloc(sizeof(Node));
+    current->left->val = -1;
+  }
+    
+  if(current->right == NULL){
+    current->right = (Node*)malloc(sizeof(Node));
+    current->right->val = -1;
+  }
+    
   if(current == NULL){
     printf("%p ", current);
     return;
@@ -79,16 +89,15 @@ int height(Node* current){
 
 int main(){
   // data array
-  int data[] = {8,5,1,7,10,12};
-  // int data[] = {5,1,3,2,4,7};
+  // int data[] = {8,5,1,7,10,12};
+  int data[] = {5,1,3,2,4,7};
   int data_len = (int)sizeof(data)/sizeof(data[0]);
 
   Node *prev, *current = NULL;
 
   for (int i=0; i< data_len; i++){
     // 先把資料建一個 node
-    ptr = (Node*)malloc(sizeof(Node));
-    ptr->val = data[i]; ptr->left = NULL; ptr->right = NULL;
+     
     
     if (root == NULL){
       root = ptr;
