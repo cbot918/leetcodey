@@ -105,6 +105,28 @@ func levelOrder(root *Node) [][]int {
 	return ans
 }
 
+func search(roo *Node, t int) int {
+	root := roo
+	for {
+		if root == nil {
+			return -1
+		} else if root.Val == t {
+			return root.Val
+		} else {
+			if t < root.Val {
+				root = root.Left
+			} else {
+				root = root.Right
+			}
+		}
+		continue
+	}
+}
+
+func Search(root *Node, t int) int {
+	return search(root, t)
+}
+
 var root *Node
 var log = fmt.Println
 var logf = fmt.Printf
@@ -121,10 +143,16 @@ func main() {
 	// InOrder(root)
 	PostOrder(root)
 
+	// TreeHeight
 	log("\nTreeHeight:")
 	log(TreeHeight(root))
 
+	// LevelOrder
 	log("\nlevelOrder:")
 	log(levelOrder(root))
+
+	// Search
+	log("\nsearch:")
+	log(search(root, 3))
 
 }

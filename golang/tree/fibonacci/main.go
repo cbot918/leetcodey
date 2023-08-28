@@ -4,6 +4,22 @@ import "fmt"
 
 var logf = fmt.Printf
 
+// recursive with cache
+
+var cache map[int]int
+
+func fcache(in int) int {
+	if val, found := cache[in]; found {
+		return val
+	}
+	if in < 2 {
+		cache[in] = in
+	} else {
+		cache[in] = fcache(in-1) + fcache(in-2)
+	}
+	return cache[in]
+}
+
 // recursive
 func f(in int) int {
 	if in == 0 {
@@ -50,7 +66,8 @@ func main() {
 	max := 10
 	// flag := "recursive"
 	// flag := "tail recursive"
-	flag := "loop version"
+	flag := "fcache"
+	cache = make(map[int]int)
 	for i := 0; i < max; i++ {
 		if flag == "recursive" {
 			logf("%d ", f(i))
@@ -61,6 +78,8 @@ func main() {
 		if flag == "loop version" {
 			logf("%d ", Fibo(i))
 		}
-
+		if flag == "fcache" {
+			logf("%d ", fcache(i))
+		}
 	}
 }
