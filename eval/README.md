@@ -4,3 +4,6 @@ https://juejin.cn/post/7100926130416254984
 
 算法手记（2）Dijkstra双栈算术表达式求值算法
 https://www.cnblogs.com/mantgh/p/3973038.html
+
+《Algorithms》—— Dijkstra 的双栈算术表达式求值算法
+https://blog.csdn.net/weixin_43734095/article/details/100531084
