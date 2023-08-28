@@ -7,3 +7,6 @@ https://www.cnblogs.com/mantgh/p/3973038.html
 
 《Algorithms》—— Dijkstra 的双栈算术表达式求值算法
 https://blog.csdn.net/weixin_43734095/article/details/100531084
+
+Dijkstra双栈对表达式进行求值算法
+https://zhuanlan.zhihu.com/p/234540423
